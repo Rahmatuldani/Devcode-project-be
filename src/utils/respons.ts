@@ -21,7 +21,7 @@ function Respons({
         break;
     
     case 201:
-        status = 'Created';
+        status = 'Success';
         break;
 
     case 400:

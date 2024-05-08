@@ -6,6 +6,8 @@ const ActivityRoutes: Router = express.Router();
 
 ActivityRoutes.get('/', ActivityController.Find)
 ActivityRoutes.get('/:id', ActivityController.FindOne)
+ActivityRoutes.patch('/:id', ActivityMiddlewares.update, ActivityController.Update)
 ActivityRoutes.post('/', ActivityMiddlewares.create, ActivityController.Create)
+ActivityRoutes.delete('/:id', ActivityController.Delete)
 
 export default ActivityRoutes;
